@@ -1,57 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		/>
-		<title>Grid Template for Bootstrap</title>
-	</head>
+<html lang="vi">
 
-	<body>
-		<h1><img src="img/logo.jpg" /></h1>
-		<div>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FAQ - Tourist Sports</title>
+
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			background: #fff;
+			color: #333;
+		}
+
+		.container {
+			width: 1000px;
+			max-width: 90%;
+			margin: 30px auto;
+		}
+
+		/* Logo */
+		.header {
+			display: flex;
+			align-items: center;
+			padding-bottom: 20px;
+		}
+
+		.header img {
+			width: 220px;
+			height: auto;
+		}
+
+		/* Menu */
+		.menu {
+			display: flex;
+			gap: 35px;
+			border-top: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+			padding: 15px 0;
+		}
+
+		.menu a {
+			text-decoration: none;
+			color: #333;
+			font-size: 16px;
+		}
+
+		.menu a:hover {
+			color: #168b45;
+		}
+
+		/* Title */
+		.title {
+			text-align: center;
+			margin: 35px 0;
+		}
+
+		.title h1 {
+			font-size: 32px;
+			color: #168b45;
+			margin-bottom: 10px;
+		}
+
+		.title p {
+			color: #777;
+		}
+
+		/* FAQ */
+		.faq {
+			margin-bottom: 25px;
+			padding: 20px;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+		}
+
+		.question {
+			font-size: 18px;
+			font-weight: bold;
+			color: #168b45;
+			margin-bottom: 10px;
+		}
+
+		.answer {
+			line-height: 1.6;
+			color: #555;
+		}
+
+		/* Footer */
+		footer {
+			margin-top: 50px;
+			padding: 25px 0;
+			border-top: 1px solid #ddd;
+			text-align: center;
+			color: #777;
+		}
+
+		footer ul {
+			list-style: none;
+			margin-top: 15px;
+		}
+
+		footer li {
+			display: inline-block;
+			margin: 0 15px;
+		}
+
+		footer a {
+			color: #555;
+			text-decoration: none;
+		}
+
+		footer a:hover {
+			color: #168b45;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+
+		<!-- HEADER -->
+		<header class="header">
+			<img src="img/logo.jpg" alt="Tourist Sports">
+		</header>
+
+		<!-- MENU -->
+		<nav class="menu">
 			<a href="#">Trang chủ</a>
 			<a href="#">Dịch vụ</a>
 			<a href="#">Về chúng tôi</a>
 			<a href="#">FAQ</a>
 			<a href="#">Liên hệ</a>
-		</div>
-		<hr />
-		<h2>FAQ</h2>
-		<hr />
-		<div>
-			<p>1. Tôi có thể trả tiền thông qua PayPal?</p>
-			<p>Được. Chúng tôi chấp nhận việc chi trả qua PayPal.</p>
-		</div>
-		<div>
-			<p>2. Tôi có thể hủy bỏ đặt hàng?</p>
-			<p>Được. Bạn có thể hủy bỏ đặt hàng bất khi nào bạn muốn.</p>
-		</div>
-		<div>
-			<p>3. Chính sách hoàn tiền như thế nào?</p>
-			<p>
-				Bạn có thể nhận được tiền hoàn trả 100% bất kể khi nào và vì bất kỳ lý
-				do gì.
+		</nav>
+
+		<!-- TITLE -->
+		<section class="title">
+			<h1>FAQ</h1>
+			<p>Các câu hỏi thường gặp</p>
+		</section>
+
+		<!-- FAQ 1 -->
+		<div class="faq">
+			<p class="question">
+				1. Tôi có thể trả tiền thông qua PayPal?
+			</p>
+			<p class="answer">
+				Được. Chúng tôi chấp nhận việc chi trả qua PayPal.
 			</p>
 		</div>
-		<div>
-			<p>4. Làm thế nào để tôi có thể nhận được hóa đơn?</p>
-			<p>Bạn có thể nhận được hóa đơn thông qua email hoặc thư tín.</p>
+
+		<!-- FAQ 2 -->
+		<div class="faq">
+			<p class="question">
+				2. Tôi có thể hủy bỏ đặt hàng?
+			</p>
+			<p class="answer">
+				Được. Bạn có thể hủy bỏ đặt hàng bất kỳ khi nào bạn muốn.
+			</p>
 		</div>
-		<hr />
+
+		<!-- FAQ 3 -->
+		<div class="faq">
+			<p class="question">
+				3. Chính sách hoàn tiền như thế nào?
+			</p>
+			<p class="answer">
+				Bạn có thể nhận được tiền hoàn trả 100% bất kể khi nào
+				và vì bất kỳ lý do gì.
+			</p>
+		</div>
+
+		<!-- FAQ 4 -->
+		<div class="faq">
+			<p class="question">
+				4. Làm thế nào để tôi có thể nhận được hóa đơn?
+			</p>
+			<p class="answer">
+				Bạn có thể nhận được hóa đơn thông qua email hoặc thư tín.
+			</p>
+		</div>
+
+		<!-- FOOTER -->
 		<footer>
-			<div>
-				<p>© Bản quyền thuộc về Công ty Du lịch Bụi.</p>
-				<ul>
-					<li><a href="#">Trang chủ</a></li>
-					<li><a href="#">Dịch vụ</a></li>
-					<li><a href="#">Về chúng tôi</a></li>
-					<li><a href="#">FAQ</a></li>
-					<li><a href="#">Liên hệ</a></li>
-				</ul>
-			</div>
+			<p>© Bản quyền thuộc về Công ty Du lịch Bụi.</p>
+
+			<ul>
+				<li><a href="#">Trang chủ</a></li>
+				<li><a href="#">Dịch vụ</a></li>
+				<li><a href="#">Về chúng tôi</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Liên hệ</a></li>
+			</ul>
 		</footer>
-	</body>
+
+	</div>
+
+</body>
+
 </html>

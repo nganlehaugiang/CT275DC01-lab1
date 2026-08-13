@@ -1,88 +1,682 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		/>
-		<title>Grid Template for Bootstrap</title>
-	</head>
+<html lang="vi">
 
-	<body>
-		<h1><img src="img/logo.jpg" /></h1>
-		<div>
-			<a href="#">Trang chủ</a>
-			<a href="#">Dịch vụ</a>
-			<a href="#">Về chúng tôi</a>
-			<a href="#">FAQ</a>
-			<a href="#">Liên hệ</a>
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Tourist Sports</title>
+
+
+	<!-- BOOTSTRAP -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+	<style>
+		/* =========================
+           CÀI ĐẶT CHUNG
+        ========================= */
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			color: #333;
+			background: #fff;
+		}
+
+
+		/* =========================
+           HEADER
+        ========================= */
+
+		.header {
+			background: white;
+			border-bottom: 1px solid #ddd;
+		}
+
+		.header-content {
+			max-width: 1200px;
+			margin: auto;
+
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			min-height: 100px;
+		}
+
+		.logo {
+			width: 220px;
+			height: auto;
+		}
+
+
+		/* MENU */
+
+		.menu {
+			display: flex;
+			align-items: center;
+			gap: 30px;
+		}
+
+		.menu a {
+			color: #333;
+			text-decoration: none;
+
+			font-size: 16px;
+			font-weight: 500;
+
+			transition: 0.3s;
+		}
+
+		.menu a:hover {
+			color: #198754;
+		}
+
+
+		/* =========================
+           SLIDER
+        ========================= */
+
+		.slider {
+			width: 100%;
+			overflow: hidden;
+		}
+
+		.slider img {
+			width: 100%;
+			height: 450px;
+
+			object-fit: cover;
+		}
+
+
+		/* =========================
+           TIÊU ĐỀ
+        ========================= */
+
+		.section-title {
+			text-align: center;
+
+			margin-top: 50px;
+			margin-bottom: 35px;
+
+			color: #198754;
+
+			font-size: 32px;
+			font-weight: bold;
+		}
+
+
+		/* =========================
+           ĐỊA ĐIỂM DU LỊCH
+        ========================= */
+
+		.destination {
+			height: 100%;
+
+			border: none;
+
+			border-radius: 10px;
+
+			overflow: hidden;
+
+			box-shadow:
+				0 3px 12px rgba(0, 0, 0, 0.12);
+
+			transition: 0.3s;
+		}
+
+		.destination:hover {
+			transform: translateY(-7px);
+
+			box-shadow:
+				0 8px 20px rgba(0, 0, 0, 0.2);
+		}
+
+		.destination img {
+			width: 100%;
+			height: 220px;
+
+			object-fit: cover;
+		}
+
+		.destination-body {
+			padding: 25px;
+
+			text-align: center;
+		}
+
+		.destination-body h4 {
+			color: #198754;
+
+			margin-bottom: 15px;
+
+			font-weight: bold;
+		}
+
+		.destination-body p {
+			color: #666;
+
+			line-height: 1.6;
+		}
+
+		.btn-detail {
+			display: inline-block;
+
+			margin-top: 10px;
+
+			padding: 10px 22px;
+
+			background: #198754;
+
+			color: white;
+
+			text-decoration: none;
+
+			border-radius: 5px;
+
+			transition: 0.3s;
+		}
+
+		.btn-detail:hover {
+			background: #146c43;
+
+			color: white;
+		}
+
+
+		/* =========================
+           LIÊN HỆ
+        ========================= */
+
+		.contact {
+			margin-top: 60px;
+
+			padding: 60px 20px;
+
+			background: #198754;
+
+			color: white;
+
+			text-align: center;
+		}
+
+		.contact h2 {
+			font-size: 32px;
+
+			margin-bottom: 15px;
+		}
+
+		.contact p {
+			font-size: 18px;
+
+			margin-bottom: 25px;
+		}
+
+		.btn-contact {
+			display: inline-block;
+
+			padding: 12px 30px;
+
+			background: white;
+
+			color: #198754;
+
+			text-decoration: none;
+
+			border-radius: 5px;
+
+			font-weight: bold;
+
+			transition: 0.3s;
+		}
+
+		.btn-contact:hover {
+			background: #eee;
+
+			color: #146c43;
+		}
+
+
+		/* =========================
+           FOOTER
+        ========================= */
+
+		footer {
+			background: #222;
+
+			color: white;
+
+			padding: 30px 0;
+		}
+
+		.footer-content {
+			max-width: 1200px;
+
+			margin: auto;
+
+			display: flex;
+
+			justify-content: space-between;
+
+			align-items: center;
+		}
+
+		.footer-content p {
+			margin: 0;
+		}
+
+		.footer-menu {
+			display: flex;
+
+			gap: 20px;
+
+			list-style: none;
+
+			margin: 0;
+			padding: 0;
+		}
+
+		.footer-menu a {
+			color: #ddd;
+
+			text-decoration: none;
+		}
+
+		.footer-menu a:hover {
+			color: white;
+		}
+
+
+		/* =========================
+           RESPONSIVE
+        ========================= */
+
+		@media (max-width: 768px) {
+
+			.header-content {
+				flex-direction: column;
+
+				padding: 15px;
+			}
+
+			.logo {
+				width: 180px;
+
+				margin-bottom: 15px;
+			}
+
+			.menu {
+				gap: 15px;
+
+				flex-wrap: wrap;
+
+				justify-content: center;
+			}
+
+			.slider img {
+				height: 300px;
+			}
+
+			.footer-content {
+				flex-direction: column;
+
+				gap: 20px;
+
+				text-align: center;
+			}
+
+			.footer-menu {
+				flex-wrap: wrap;
+
+				justify-content: center;
+			}
+
+		}
+	</style>
+
+</head>
+
+
+<body>
+
+
+	<!-- =====================================
+     HEADER
+     ===================================== -->
+
+	<header class="header">
+
+		<div class="header-content">
+
+			<!-- LOGO -->
+
+			<a href="index.html">
+
+				<img src="img/logo.jpg" alt="Tourist Sports" class="logo">
+
+			</a>
+
+
+			<!-- MENU -->
+
+			<nav class="menu">
+
+				<a href="index.html">
+					Trang chủ
+				</a>
+
+				<a href="service.html">
+					Dịch vụ
+				</a>
+
+				<a href="#">
+					Về chúng tôi
+				</a>
+
+				<a href="#">
+					FAQ
+				</a>
+
+				<a href="#">
+					Liên hệ
+				</a>
+
+			</nav>
+
 		</div>
-		<hr />
-		<div>
-			<div>
-				<img
-					alt="First slide"
-					src="img/1.jpg"
-				/>
+
+	</header>
+
+
+
+	<!-- =====================================
+     SLIDER
+===================================== -->
+
+	<section class="slider">
+
+		<div id="touristSlider" class="carousel slide" data-bs-ride="carousel">
+
+
+			<!-- NÚT CHUYỂN ẢNH -->
+
+			<div class="carousel-indicators">
+
+				<button type="button" data-bs-target="#touristSlider" data-bs-slide-to="0" class="active"></button>
+
+				<button type="button" data-bs-target="#touristSlider" data-bs-slide-to="1"></button>
+
+				<button type="button" data-bs-target="#touristSlider" data-bs-slide-to="2"></button>
+
 			</div>
-			<div>
-				<img
-					alt="Second slide"
-					src="img/2.jpg"
-				/>
+
+
+			<!-- ẢNH -->
+
+			<div class="carousel-inner">
+
+				<!-- ẢNH 1 -->
+
+				<div class="carousel-item active">
+
+					<img src="img/1.jpg" class="d-block w-100" alt="Vịnh Hạ Long">
+
+				</div>
+
+
+				<!-- ẢNH 2 -->
+
+				<div class="carousel-item">
+
+					<img src="img/2.jpg" class="d-block w-100" alt="Bãi biển">
+
+				</div>
+
+
+				<!-- ẢNH 3 -->
+
+				<div class="carousel-item">
+
+					<img src="img/3.jpg" class="d-block w-100" alt="Chợ nổi">
+
+				</div>
+
 			</div>
-			<div>
-				<img
-					alt="Third slide"
-					src="img/3.jpg"
-				/>
-			</div>
+
+
+			<!-- NÚT PREVIOUS -->
+
+			<button class="carousel-control-prev" type="button" data-bs-target="#touristSlider" data-bs-slide="prev">
+
+				<span class="carousel-control-prev-icon"></span>
+
+			</button>
+
+
+			<!-- NÚT NEXT -->
+
+			<button class="carousel-control-next" type="button" data-bs-target="#touristSlider" data-bs-slide="next">
+
+				<span class="carousel-control-next-icon"></span>
+
+			</button>
+
 		</div>
-		<div>
-			<img src="img/11.jpg" />
-			<h4>Điểm du lịch 1</h4>
+
+	</section>
+
+
+
+	<!-- =====================================
+     ĐIỂM DU LỊCH
+===================================== -->
+
+	<section class="container">
+
+		<h2 class="section-title">
+			Điểm du lịch nổi bật
+		</h2>
+
+
+		<div class="row g-4">
+
+
+			<!-- ĐỊA ĐIỂM 1 -->
+
+			<div class="col-md-4">
+
+				<div class="destination">
+
+					<img src="img/11.jpg" alt="Điểm du lịch 1">
+
+					<div class="destination-body">
+
+						<h4>
+							Điểm du lịch 1
+						</h4>
+
+						<p>
+							Đây là địa điểm du lịch 1,
+							chi tiết về điểm du lịch này
+							các bạn có thể có được bằng
+							cách liên lạc với chúng tôi
+							trực tiếp qua điện thoại hoặc email.
+						</p>
+
+						<a href="#" class="btn-detail">
+							Xem thêm
+						</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+
+			<!-- ĐỊA ĐIỂM 2 -->
+
+			<div class="col-md-4">
+
+				<div class="destination">
+
+					<img src="img/12.jpg" alt="Điểm du lịch 2">
+
+					<div class="destination-body">
+
+						<h4>
+							Điểm du lịch 2
+						</h4>
+
+						<p>
+							Đây là địa điểm du lịch 2,
+							chi tiết về điểm du lịch này
+							các bạn có thể có được bằng
+							cách liên lạc với chúng tôi
+							trực tiếp qua điện thoại hoặc email.
+						</p>
+
+						<a href="#" class="btn-detail">
+							Xem thêm
+						</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+
+			<!-- ĐỊA ĐIỂM 3 -->
+
+			<div class="col-md-4">
+
+				<div class="destination">
+
+					<img src="img/13.jpg" alt="Điểm du lịch 3">
+
+					<div class="destination-body">
+
+						<h4>
+							Điểm du lịch 3
+						</h4>
+
+						<p>
+							Đây là địa điểm du lịch 3,
+							chi tiết về điểm du lịch này
+							các bạn có thể có được bằng
+							cách liên lạc với chúng tôi
+							trực tiếp qua điện thoại hoặc email.
+						</p>
+
+						<a href="#" class="btn-detail">
+							Xem thêm
+						</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+		</div>
+
+	</section>
+
+
+
+	<!-- =====================================
+     LIÊN HỆ
+===================================== -->
+
+	<section class="contact">
+
+		<h2>
+			Hãy liên hệ với chúng tôi!
+		</h2>
+
+		<p>
+			Chúng tôi mong muốn lắng nghe từ bạn.
+		</p>
+
+		<a href="#" class="btn-contact">
+			Liên hệ
+		</a>
+
+	</section>
+
+
+
+	<!-- =====================================
+     FOOTER
+===================================== -->
+
+	<footer>
+
+		<div class="footer-content">
+
 			<p>
-				Đây là địa điểm du lịch 1, chi tiết về điểm du lịch này các bạn có thể
-				có được bằng cách liên lạc với chúng tôi trực tiếp qua điện thoại hoặc
-				email.
+				© Bản quyền thuộc về Công ty Du lịch Bụi.
 			</p>
+
+
+			<ul class="footer-menu">
+
+				<li>
+					<a href="#">
+						Trang chủ
+					</a>
+				</li>
+
+				<li>
+					<a href="#">
+						Dịch vụ
+					</a>
+				</li>
+
+				<li>
+					<a href="#">
+						Về chúng tôi
+					</a>
+				</li>
+
+				<li>
+					<a href="#">
+						FAQ
+					</a>
+				</li>
+
+				<li>
+					<a href="#">
+						Liên hệ
+					</a>
+				</li>
+
+			</ul>
+
 		</div>
-		<div>
-			<img src="img/12.jpg" />
-			<h4>Điểm du lịch 2</h4>
-			<p>
-				Đây là địa điểm du lịch 2, chi tiết về điểm du lịch này các bạn có thể
-				có được bằng cách liên lạc với chúng tôi trực tiếp qua điện thoại hoặc
-				email.
-			</p>
-		</div>
-		<div>
-			<img src="img/13.jpg" />
-			<h4>Điểm du lịch 3</h4>
-			<p>
-				Đây là địa điểm du lịch 3, chi tiết về điểm du lịch này các bạn có thể
-				có được bằng cách liên lạc với chúng tôi trực tiếp qua điện thoại hoặc
-				email.
-			</p>
-		</div>
-		<div>
-			<h4>Hãy liên hệ với chúng tôi!</h4>
-			<p>Chúng tôi mong muốn lắng nghe từ bạn.</p>
-			<a href="#">Liên hệ</a>
-		</div>
-		<hr />
-		<footer>
-			<div>
-				<p>© Bản quyền thuộc về Công ty Du lịch Bụi.</p>
-				<ul>
-					<li><a href="#">Trang chủ</a></li>
-					<li><a href="#">Dịch vụ</a></li>
-					<li><a href="#">Về chúng tôi</a></li>
-					<li><a href="#">FAQ</a></li>
-					<li><a href="#">Liên hệ</a></li>
-				</ul>
-			</div>
-		</footer>
-	</body>
+
+	</footer>
+
+
+
+	<!-- BOOTSTRAP JS -->
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+	</script>
+
+
+</body>
+
 </html>

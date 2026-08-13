@@ -1,84 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		/>
-		<title>Grid Template for Bootstrap</title>
-	</head>
+<html lang="vi">
 
-	<body>
-		<h1><img src="img/logo.jpg" /></h1>
-		<div>
-			<a href="#">Trang chủ</a>
-			<a href="#">Dịch vụ</a>
-			<a href="#">Về chúng tôi</a>
-			<a href="#">FAQ</a>
-			<a href="#">Liên hệ</a>
-		</div>
-		<hr />
-		<div>
-			<h3>Liên hệ với chúng tôi!</h3>
-			<p>
-				Chúng tôi mong muốn lắng nghe từ bạn. Hãy liên hệ với chúng tôi và một
-				thành viên của chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất.
-				Chúng tôi yêu thích việc nhận được email của bạn mỗi ngày
-				<em>mỗi ngày</em>.
-			</p>
-			<form>
-				<label for="name">Tên của bạn</label>
-				<input
-					type="text"
-					placeholder="Tên của bạn"
-				/>
-				<label for="email">Email của bạn</label>
-				<input
-					type="email"
-					placeholder="Email của bạn"
-				/>
-				<label>Nội dung</label>
-				<textarea rows="3"></textarea>
-			</form>
-		</div>
-		<div>
-			<h5>Bản đồ</h5>
-			<p>
-				<a href="#">
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15729855.42909206!2d96.7382165931671!3d15.735434000981483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31157a4d736a1e5f%3A0xb03bb0c9e2fe62be!2zVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1445179448264"
-						width="200"
-						height="200"
-						frameborder="0"
-						style="border: 0"
-						scrolling="no"
-						marginheight="0"
-						marginwidth="0"
-					></iframe>
-					<br />
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<title>Liên hệ - Tourist Sports</title>
+</head>
+
+<body>
+
+	<!-- HEADER -->
+	<header class="bg-white border-bottom shadow-sm">
+		<div class="container py-3">
+			<div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+
+				<!-- LOGO -->
+				<a href="index.html" class="mb-3 mb-md-0">
+					<img src="img/logo.jpg" alt="Tourist Sports" class="img-fluid" style="max-height: 70px;">
 				</a>
-				<br />
-				<a href="#">Xem bản đồ</a>
-			</p>
-			<p>
-				Đại chỉ 1.
-				<br />
-				Địa chỉ 2.
-			</p>
-		</div>
-		<hr />
-		<footer>
-			<div>
-				<p>© Bản quyền thuộc về Công ty Du lịch Bụi.</p>
-				<ul>
-					<li><a href="#">Trang chủ</a></li>
-					<li><a href="#">Dịch vụ</a></li>
-					<li><a href="#">Về chúng tôi</a></li>
-					<li><a href="#">FAQ</a></li>
-					<li><a href="#">Liên hệ</a></li>
-				</ul>
+
+				<!-- MENU -->
+				<nav class="nav nav-pills">
+					<a class="nav-link text-dark me-1" href="index.html">
+						Trang chủ
+					</a>
+
+					<a class="nav-link text-dark me-1" href="service.html">
+						Dịch vụ
+					</a>
+
+					<a class="nav-link text-dark me-1" href="about.html">
+						Về chúng tôi
+					</a>
+
+					<a class="nav-link text-dark me-1" href="faq.html">
+						FAQ
+					</a>
+
+					<a class="nav-link active" href="contact.html">
+						Liên hệ
+					</a>
+				</nav>
+
 			</div>
-		</footer>
-	</body>
+		</div>
+	</header>
+
+
+	<!-- NỘI DUNG -->
+	<main class="container my-5">
+
+		<div class="row g-5">
+
+			<!-- FORM LIÊN HỆ -->
+			<div class="col-lg-7">
+
+				<h3 class="fw-bold text-primary mb-3">
+					Liên hệ với chúng tôi!
+				</h3>
+
+				<p class="text-secondary mb-4">
+					Chúng tôi mong muốn lắng nghe từ bạn.
+					Hãy liên hệ với chúng tôi và một thành viên
+					của chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất.
+					Chúng tôi yêu thích việc nhận được email của bạn
+					<em>mỗi ngày</em>.
+				</p>
+
+				<form>
+
+					<!-- TÊN -->
+					<div class="mb-3">
+						<label for="name" class="form-label fw-semibold">
+							Tên của bạn
+						</label>
+
+						<input type="text" class="form-control" id="name" placeholder="Tên của bạn" required>
+					</div>
+
+
+					<!-- EMAIL -->
+					<div class="mb-3">
+						<label for="email" class="form-label fw-semibold">
+							Email của bạn
+						</label>
+
+						<input type="email" class="form-control" id="email" placeholder="Email của bạn" required>
+					</div>
+
+
+					<!-- NỘI DUNG -->
+					<div class="mb-3">
+						<label for="message" class="form-label fw-semibold">
+							Nội dung
+						</label>
+
+						<textarea class="form-control" id="message" rows="5" placeholder="Nhập nội dung tin nhắn..."
+							required></textarea>
+					</div>
+
+
+					<!-- BUTTON -->
+					<button type="submit" class="btn btn-primary px-4 fw-semibold">
+						Gửi liên hệ
+					</button>
+
+				</form>
+
+			</div>
+
+
+			<!-- BẢN ĐỒ + ĐỊA CHỈ -->
+			<div class="col-lg-5">
+
+				<div class="bg-light p-4 rounded shadow-sm border">
+
+					<h5 class="fw-bold text-dark mb-3">
+						Bản đồ
+					</h5>
+
+					<!-- MAP -->
+					<div class="ratio ratio-4x3 mb-3 rounded overflow-hidden shadow-sm">
+
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15729855.42909206!2d96.7382165931671!3d15.735434000981483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31157a4d736a1e5f%3A0xb03bb0c9e2fe62be!2zVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1445179448264"
+							style="border:0;" allowfullscreen loading="lazy">
+						</iframe>
+
+					</div>
+
+
+					<!-- XEM BẢN ĐỒ -->
+					<div class="mb-4">
+
+						<a href="https://maps.google.com" target="_blank" class="btn btn-sm btn-outline-secondary">
+							Xem bản đồ phóng to
+						</a>
+
+					</div>
+
+
+					<!-- ĐỊA CHỈ -->
+					<h6 class="fw-bold text-dark mb-2">
+						Địa chỉ liên hệ:
+					</h6>
+
+					<p class="text-secondary mb-0">
+						<strong>Địa chỉ 1:</strong>
+						phường Cái Răng,
+						Thành phố Cần Thơ
+						<br><br>
+
+						<strong>Địa chỉ 2:</strong>
+						Phường Ninh kiều,
+						Thành phố Cần Thơ
+					</p>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</main>
+
+
+	<!-- FOOTER -->
+	<footer class="bg-dark text-white py-4 mt-5">
+
+		<div class="container">
+
+			<div class="d-flex flex-column flex-md-row
+                        justify-content-between align-items-center">
+
+				<p class="mb-2 mb-md-0 text-secondary">
+					© Bản quyền thuộc về Công ty Du lịch Bụi.
+				</p>
+
+				<ul class="list-inline mb-0">
+
+					<li class="list-inline-item">
+						<a href="index.html" class="text-secondary text-decoration-none px-2">
+							Trang chủ
+						</a>
+					</li>
+
+					<li class="list-inline-item">
+						<a href="service.html" class="text-secondary text-decoration-none px-2">
+							Dịch vụ
+						</a>
+					</li>
+
+					<li class="list-inline-item">
+						<a href="about.html" class="text-secondary text-decoration-none px-2">
+							Về chúng tôi
+						</a>
+					</li>
+
+					<li class="list-inline-item">
+						<a href="faq.html" class="text-secondary text-decoration-none px-2">
+							FAQ
+						</a>
+					</li>
+
+					<li class="list-inline-item">
+						<a href="contact.html" class="text-secondary text-decoration-none px-2">
+							Liên hệ
+						</a>
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	</footer>
+
+
+	<!-- BOOTSTRAP JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
 </html>

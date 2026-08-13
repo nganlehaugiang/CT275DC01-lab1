@@ -1,71 +1,487 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		/>
-		<title>Grid Template for Bootstrap</title>
-	</head>
+<html lang="vi">
 
-	<body>
-		<h1><img src="img/logo.jpg" /></h1>
-		<div>
-			<a href="#">Trang chủ</a>
-			<a href="#">Dịch vụ</a>
-			<a href="#">Về chúng tôi</a>
-			<a href="#">FAQ</a>
-			<a href="#">Liên hệ</a>
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Các dịch vụ - Tourist Sports</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f5f5f5;
+			color: #333;
+		}
+
+		/* ================= HEADER ================= */
+
+		header {
+			background-color: white;
+			border-bottom: 1px solid #ddd;
+		}
+
+		.header {
+			width: 1100px;
+			max-width: 90%;
+			margin: auto;
+
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			min-height: 110px;
+		}
+
+		.logo {
+			width: 210px;
+		}
+
+		.menu {
+			display: flex;
+			gap: 35px;
+		}
+
+		.menu a {
+			text-decoration: none;
+			color: #333;
+
+			font-size: 16px;
+			font-weight: bold;
+
+			transition: 0.3s;
+		}
+
+		.menu a:hover {
+			color: #16833b;
+		}
+
+
+		/* ================= TITLE ================= */
+
+		.title {
+			text-align: center;
+			margin: 40px 0;
+
+			color: #16833b;
+			font-size: 32px;
+		}
+
+
+		/* ================= SERVICES ================= */
+
+		.services {
+			width: 1100px;
+			max-width: 90%;
+
+			margin: auto;
+
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+
+			gap: 30px;
+		}
+
+		.service {
+			background-color: white;
+
+			border-radius: 10px;
+
+			overflow: hidden;
+
+			text-align: center;
+
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+			transition: 0.3s;
+		}
+
+		.service:hover {
+			transform: translateY(-8px);
+
+			box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+		}
+
+
+		/* Tên gói */
+
+		.service-title {
+			background-color: #16833b;
+
+			color: white;
+
+			padding: 20px;
+
+			font-size: 24px;
+			font-weight: bold;
+		}
+
+
+		/* Giá */
+
+		.price {
+			font-size: 28px;
+
+			color: #e63946;
+
+			font-weight: bold;
+
+			padding: 25px 10px 15px;
+		}
+
+
+		/* Nội dung */
+
+		.service-content {
+			padding: 10px 25px 30px;
+		}
+
+		.service-content p {
+			padding: 12px;
+
+			border-bottom: 1px solid #eee;
+
+			font-size: 16px;
+		}
+
+
+		/* Nút */
+
+		.register {
+			display: inline-block;
+
+			margin-top: 20px;
+
+			padding: 12px 25px;
+
+			background-color: #16833b;
+
+			color: white;
+
+			text-decoration: none;
+
+			border-radius: 5px;
+
+			font-weight: bold;
+
+			transition: 0.3s;
+		}
+
+		.register:hover {
+			background-color: #0d5f2a;
+		}
+
+
+		/* ================= FOOTER ================= */
+
+		footer {
+			margin-top: 60px;
+
+			background-color: #222;
+
+			color: white;
+
+			padding: 30px 0;
+		}
+
+		.footer {
+			width: 1100px;
+			max-width: 90%;
+
+			margin: auto;
+
+			display: flex;
+
+			justify-content: space-between;
+
+			align-items: center;
+		}
+
+		.footer p {
+			font-size: 14px;
+		}
+
+		.footer-menu {
+			display: flex;
+
+			list-style: none;
+
+			gap: 20px;
+		}
+
+		.footer-menu a {
+			color: white;
+
+			text-decoration: none;
+
+			font-size: 14px;
+		}
+
+		.footer-menu a:hover {
+			color: #49b96a;
+		}
+
+
+		/* ================= RESPONSIVE ================= */
+
+		@media (max-width: 768px) {
+
+			.header {
+				flex-direction: column;
+
+				padding: 20px 0;
+
+				gap: 20px;
+			}
+
+			.menu {
+				gap: 15px;
+
+				flex-wrap: wrap;
+
+				justify-content: center;
+			}
+
+			.services {
+				grid-template-columns: 1fr;
+			}
+
+			.footer {
+				flex-direction: column;
+
+				gap: 20px;
+
+				text-align: center;
+			}
+
+			.footer-menu {
+				flex-wrap: wrap;
+
+				justify-content: center;
+			}
+		}
+	</style>
+
+</head>
+
+
+<body>
+
+
+	<!-- ================= HEADER ================= -->
+
+	<header>
+
+		<div class="header">
+
+			<a href="#">
+				<img class="logo" src="img/logo.jpg" alt="Tourist Sports">
+			</a>
+
+
+			<nav class="menu">
+
+				<a href="#">Trang chủ</a>
+
+				<a href="#">Dịch vụ</a>
+
+				<a href="#">Về chúng tôi</a>
+
+				<a href="#">FAQ</a>
+
+				<a href="#">Liên hệ</a>
+
+			</nav>
+
 		</div>
-		<hr />
-		<h2 style="margin: 0"><b>Các dịch vụ</b></h2>
-		<hr />
-		<div>
-			<p>Thành phố</p>
-			<div>
-				<p>19.999.999 VNĐ</p>
-				<p>Bao gồm mọi chi phí</p>
-				<p>1 Hướng dẫn viên</p>
-				<p>Phòng VIP</p>
-				<p>Giảm giá 50%</p>
-				<a href="#">Đăng ký ngay</a>
+
+	</header>
+
+
+
+	<!-- ================= TITLE ================= -->
+
+	<h1 class="title">
+		Các dịch vụ
+	</h1>
+
+
+
+	<!-- ================= SERVICES ================= -->
+
+	<section class="services">
+
+
+		<!-- DỊCH VỤ 1 -->
+
+		<div class="service">
+
+			<div class="service-title">
+				Thành phố
 			</div>
+
+			<div class="price">
+				19.999.999 VNĐ
+			</div>
+
+			<div class="service-content">
+
+				<p>
+					Bao gồm mọi chi phí
+				</p>
+
+				<p>
+					1 Hướng dẫn viên
+				</p>
+
+				<p>
+					Phòng VIP
+				</p>
+
+				<p>
+					Giảm giá 50%
+				</p>
+
+				<a href="#" class="register">
+					Đăng ký ngay
+				</a>
+
+			</div>
+
 		</div>
-		<div>
-			<p>Bãi biển</p>
-			<div>
-				<p>19.999.999 VNĐ</p>
-				<p>Bao gồm mọi chi phí</p>
-				<p>1 Hướng dẫn viên</p>
-				<p>Phòng VIP</p>
-				<p>Thức ăn miễn phí</p>
-				<a href="#">Đăng ký ngay</a>
+
+
+
+		<!-- DỊCH VỤ 2 -->
+
+		<div class="service">
+
+			<div class="service-title">
+				Bãi biển
 			</div>
+
+			<div class="price">
+				19.999.999 VNĐ
+			</div>
+
+			<div class="service-content">
+
+				<p>
+					Bao gồm mọi chi phí
+				</p>
+
+				<p>
+					1 Hướng dẫn viên
+				</p>
+
+				<p>
+					Phòng VIP
+				</p>
+
+				<p>
+					Thức ăn miễn phí
+				</p>
+
+				<a href="#" class="register">
+					Đăng ký ngay
+				</a>
+
+			</div>
+
 		</div>
-		<div>
-			<p>Tiết kiệm</p>
-			<div>
-				<p>9.999.999 VNĐ</p>
-				<p>Bao gồm mọi chi phí</p>
-				<p>1 Hướng dẫn viên</p>
-				<p>Phòng bình dân</p>
-				<p>Giảm giá thức ăn 10%</p>
-				<a href="#">Đăng ký ngay</a>
+
+
+
+		<!-- DỊCH VỤ 3 -->
+
+		<div class="service">
+
+			<div class="service-title">
+				Tiết kiệm
 			</div>
+
+			<div class="price">
+				9.999.999 VNĐ
+			</div>
+
+			<div class="service-content">
+
+				<p>
+					Bao gồm mọi chi phí
+				</p>
+
+				<p>
+					1 Hướng dẫn viên
+				</p>
+
+				<p>
+					Phòng bình dân
+				</p>
+
+				<p>
+					Giảm giá thức ăn 10%
+				</p>
+
+				<a href="#" class="register">
+					Đăng ký ngay
+				</a>
+
+			</div>
+
 		</div>
-		<hr />
-		<footer>
-			<div>
-				<p>© Bản quyền thuộc về Công ty Du lịch Bụi.</p>
-				<ul>
-					<li><a href="#">Trang chủ</a></li>
-					<li><a href="#">Dịch vụ</a></li>
-					<li><a href="#">Về chúng tôi</a></li>
-					<li><a href="#">FAQ</a></li>
-					<li><a href="#">Liên hệ</a></li>
-				</ul>
-			</div>
-		</footer>
-	</body>
+
+
+	</section>
+
+
+
+	<!-- ================= FOOTER ================= -->
+
+	<footer>
+
+		<div class="footer">
+
+			<p>
+				© Bản quyền thuộc về Công ty Du lịch Bụi.
+			</p>
+
+
+			<ul class="footer-menu">
+
+				<li>
+					<a href="#">Trang chủ</a>
+				</li>
+
+				<li>
+					<a href="#">Dịch vụ</a>
+				</li>
+
+				<li>
+					<a href="#">Về chúng tôi</a>
+				</li>
+
+				<li>
+					<a href="#">FAQ</a>
+				</li>
+
+				<li>
+					<a href="#">Liên hệ</a>
+				</li>
+
+			</ul>
+
+		</div>
+
+	</footer>
+
+
+</body>
+
 </html>
