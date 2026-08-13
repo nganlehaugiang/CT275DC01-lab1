@@ -2,9 +2,8 @@
 
 Học kỳ 3, Năm học: 2025-2026
 
-**Họ tên**: ...
+**Họ tên**: Lê Kim Ngân
 
-**MSSV**: ...
+**MSSV**: DC21V7N604
 
 **Lớp HP**: CT275DC01.
-
